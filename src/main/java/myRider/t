@@ -1,0 +1,47 @@
+Как поставить в нужное место курсор
+[22:52:06] Ян Вязовский: тогда еще вопрос
+путь к файлу считать проблемм нет
+а вот как сохранить положение курсора
+а потом его открыть в том же местеЕсли дело про положение курсора в файле, то полагаю тут поможет RandomAccesFile
+[22:55:10] Ян Вязовский: конкретно метод seek()
+[22:55:34] Ян Вязовский: и getFilePointer()
+
+
+Как изменить цвет определенного слова в документе
+http://stackoverflow.com/questions/14400946/how-to-change-the-color-of-specific-words-in-a-jtextpane
+
+
+Книга подготовки к экзамену на англитйском
+
+https://books.google.ca/books?id=nmSzBQAAQBAJ&printsec=frontcover&dq=OCA+Java+SE+8+Programmer+I+Study+Guide&hl=ru&sa=X&ved=0ahUKEwiSusug_9DPAhUP72MKHXKeAKkQ6AEIKjAA#v=onepage&q=OCA%20Java%20SE%208%20Programmer%20I%20Study%20Guide&f=false
+https://books.google.ca/books?id=bvYbCQAAQBAJ&pg=PA164&lpg=PA164&dq=map%3CString,+Double%3E+map+%3D+new+HashMap%3C%3E();+ocp&source=bl&ots=E14sdA7226&sig=NsoQm6K3eliXnNAL7hbWUDB70FQ&hl=ru&sa=X&ved=0ahUKEwjx56OvnczPAhUJwWMKHVVyCxkQ6AEIKDAB#v=onepage&q&f=false
+
+Формат конца строк
+
+http://www.webmancer.org/fatal-lf-would-be-replaced-by-crlf-in/
+
+
+Используй упаковщик в setup файл, или упаковщики есть типа launch4j.
+Или платный Excelsior есть. Или на си++ напиши экзешник или сделай бат файл или перепиши программу на си++ ибо нефиг.
+
+Как сделать EXE
+
+В IDEA можно сделать .exe для JavaFX приложения, для этого идем File — Project Structure.
+В открывшемся окне слева выбираем вкладку Artifacts
+Для добавления нового артефакта жмем зеленый плюс +
+В выпадающем списке выбираем JavaFX Application
+В правой части окна переходим на вкладку JavaFX
+Заполняем поля. Можно заполнить только Application Class указав там класс с методом main
+И самое главное в Native bundle выбираем all
+И в верхней части этого окна ставим галочку Build on make
+И еще выше задаем Output directory
+Тогда при запуске приложения в папке указанной в Output directory создастся помимо прочего пака bundles,
+в которой будет лежать nameProjects.exe файл и папка с именем проекта. nameProjects.exe — это файл установщик,
+но его я не пробовал использовать.
+Папка с именем проекта — это папка содержащая среду исполнения java и .exe файл с именем проекта.
+Эту папку можно передавать пользователям. При этом им не нужно иметь установленную java на своих windows.
+Все хорошо, но я столкнулся со следующими ограничениями: путь к .exe файлу не должен содержать русских букв.
+С английскими буквами и пробелами в пути у меня все заработало.
+Если хотим чтобы наше творение запускалось на всех windows нужно использовать 32 битный jdk,
+в моем случае это jdk-8u40-windows-i586.exe Полученный exe-шник должен полностью работать на windows начиная с vista,
+у меня под windows 7 все работает. В windows xp exe-шники из моих проектов тоже запускались, но не во всех проектах все работало.
