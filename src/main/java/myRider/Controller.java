@@ -558,7 +558,7 @@ public class Controller
 
     public ArrayList<String> getWords(String wrd, String direction)
     {
-// ключ доступа к яндекс trnsl.1.1.20160928T190600Z.7a199fa95d360255.bca499bd605822f36e9144bf0e334af8dfbb391e
+
 // http://drupalace.ru/lesson/programmnyy-perevod-teksta-s-pomoshchyu-google-translate
 //        try
 //        {
